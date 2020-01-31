@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -eu
 
 RESPONSE=$(curl -S -X POST -H "Content-Type: application/json" --data "{ \"commit\": \"${GITHUB_SHA}\", \"ref\": \"${GITHUB_REF}\", \"default_branch\": \"master\" }" ${WEBHOOK_URL})
